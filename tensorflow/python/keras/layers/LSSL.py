@@ -104,6 +104,7 @@ class LSSL(Layer):
           kernel_size = input_shape[-2]
           in_units = input_shape[-1]
           kernel = array_ops.zeros((1, kernel_size, in_units, self.units))
+          A = 
           for i in range(kernel_size):
             
             
