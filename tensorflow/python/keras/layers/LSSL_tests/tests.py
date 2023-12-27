@@ -28,6 +28,9 @@ sys.path.append("../")
 from LSSL import LSSL
 
 if __name__ == '__main__':
-  layer = LSSL(32)
-  layer.build(input_shape = (3, 10, 55))
-  x = layer(tf.zeros((3, 100, 55)))
+  layer = LSSL(32, 5)
+  array = tf.random.uniform((3, 7, 11))
+  x = layer(array, training = False)
+  #layer.build(input_shape = (3, 7, 11))
+  #print(x[1, 1], array[1, 1])
+  print(x, array)
